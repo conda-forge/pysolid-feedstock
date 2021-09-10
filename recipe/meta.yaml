@@ -10,7 +10,7 @@ source:
   sha256: bfb503cebe9f5bca2c2d4cb8c223e2348d9118d76f8f5c07573239ff559acd14
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win or py<36]
   script: "{{ PYTHON }} -m pip install . -vv"
 
@@ -24,7 +24,7 @@ requirements:
     - python
     - numpy
     - scipy
-    - matplotlib
+    - matplotlib-base
     - scikit-image
 
 test:
