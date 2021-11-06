@@ -1,17 +1,19 @@
 {% set name = "PySolid" %}
-{% set version = "0.1.2" %}
+{% set version = "0.2.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/insarlab/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: bfb503cebe9f5bca2c2d4cb8c223e2348d9118d76f8f5c07573239ff559acd14
+  url: https://github.com/jhkennedy/{{ name }}/archive/refs/heads/pipify.tar.gz
+  sha2: 519e73242e4001daa1519c3bded2980f75bb9ba09c6bd7d9c9121f023f580e3c
+  # url: https://github.com/insarlab/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
+  # sha256: bfb503cebe9f5bca2c2d4cb8c223e2348d9118d76f8f5c07573239ff559acd14
 
 build:
-  number: 1
-  skip: True  # [win or py<36]
+  number: 0
+  skip: True  # [py<36]
   script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
@@ -20,6 +22,8 @@ requirements:
   host:
     - python
     - pip
+    - numpy
+    - setuptools
   run:
     - python
     - numpy
