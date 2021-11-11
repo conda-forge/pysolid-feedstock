@@ -6,14 +6,12 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/jhkennedy/{{ name }}/archive/refs/heads/pipify.tar.gz
-  sha256: 519e73242e4001daa1519c3bded2980f75bb9ba09c6bd7d9c9121f023f580e3c
-  # url: https://github.com/insarlab/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
-  # sha256: bfb503cebe9f5bca2c2d4cb8c223e2348d9118d76f8f5c07573239ff559acd14
+   url: https://github.com/insarlab/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
+   sha256: b4a23962cee3c4d2eecad523a4bd2030c7633f9916b75c648cac5c057816dddb
 
 build:
   number: 0
-  skip: True  # [py<36]
+  skip: true  # [py<36]
   script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
@@ -43,7 +41,7 @@ about:
   license: GPL-3.0-or-later
   license_family: GPL
   license_file: LICENSE
-  summary: 'A Python wrapper for solid to compute solid Earth tides'
+  summary: A Python wrapper for solid to compute solid Earth tides
   description: |
     The Python based solid Earth tides (PySolid) is a thin Python wrapper of the
     solid.for program (by Dennis Milbert based on `dehanttideinelMJD.f` from
