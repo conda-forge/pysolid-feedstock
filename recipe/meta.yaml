@@ -24,6 +24,9 @@ requirements:
     - python
     - pip
     - numpy
+    - scipy
+    - matplotlib-base
+    - scikit-image
     - setuptools
   run:
     - python
