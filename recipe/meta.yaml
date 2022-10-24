@@ -1,5 +1,5 @@
 {% set name = "PySolid" %}
-{% set version = "0.2.2" %}
+{% set version = "0.2.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/insarlab/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 6f46e77b3db7d2e186cb74d8f51ed92d35ab1ee0a2ab5f793d46ec7b9e3f5176
+  sha256: a58bc0591ee2257bb159663c033275608c187adc27fc2c569634393e41799798
 
 build:
-  number: 1
+  number: 0
   skip: true  # [py<36]
   script: {{ PYTHON }} -m pip install . -vv
 
