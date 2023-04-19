@@ -13,7 +13,8 @@ build:
   number: 0
   skip: true           # [py<36]
   script:
-    - export SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}
+    - export SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}    [not win]
+    - set SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}       [win]
     - {{ PYTHON }} -m pip install . -vv
 
 requirements:
