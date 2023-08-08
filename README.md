@@ -12,12 +12,12 @@ Summary: A Python wrapper for solid to compute solid Earth tides
 Development: https://github.com/insarlab/PySolid
 
 The Python based solid Earth tides (PySolid) is a thin Python wrapper of the
-solid.for program (by Dennis Milbert based on `dehanttideinelMJD.f` from
+`solid.for` program (by Dennis Milbert based on `dehanttideinelMJD.f` from
 V. Dehant, S. Mathews, J. Gipson and C. Bruyninx) to calculate solid Earth
 tides in east/north/up direction (section 7.1.1 in the 2010 IERS Conventions).
-Solid Earth tides introduces very long spatial wavelength range components in
-SAR/InSAR observations, as shown in the Sentinel-1 data with regular
-acquisitions and large swaths (Fattahi et al., 2020).
+Solid Earth tides introduces large offsets in SAR observations and long spatial
+wavelength ramps in InSAR observations, as shown in the Sentinel-1 data with
+regular acquisitions and large swaths (Yunjun et al., 2022).
 
 
 Current build status
@@ -119,6 +119,34 @@ Current build status
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13835&branchName=main">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pysolid-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_numpy1.23python3.11.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_numpy1.21python3.10.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13835&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pysolid-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_numpy1.21python3.10.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_numpy1.21python3.8.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13835&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pysolid-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_numpy1.21python3.8.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_numpy1.21python3.9.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13835&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pysolid-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_numpy1.21python3.9.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_numpy1.23python3.11.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13835&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pysolid-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_numpy1.23python3.11.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
