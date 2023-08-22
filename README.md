@@ -322,5 +322,6 @@ Feedstock Maintainers
 
 * [@jhkennedy](https://github.com/jhkennedy/)
 * [@jlrine2](https://github.com/jlrine2/)
+* [@scottstanie](https://github.com/scottstanie/)
 * [@yunjunz](https://github.com/yunjunz/)
 
