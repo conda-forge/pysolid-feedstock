@@ -29,18 +29,14 @@ requirements:
     - libpython  # [win]
     - python
     - pip
-    - matplotlib-base
     - numpy
-    - scikit-image
     - scipy
     - setuptools
     - setuptools_scm
     - wheel
   run:
     - python
-    - matplotlib-base
     - numpy
-    - scikit-image
     - scipy
 
 test:
@@ -67,4 +63,5 @@ extra:
   recipe-maintainers:
     - jhkennedy
     - jlrine2
+    - scottstanie
     - yunjunz
