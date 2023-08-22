@@ -1,5 +1,5 @@
 {% set name = "PySolid" %}
-{% set version = "0.3.0" %}
+{% set version = "0.3.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/insarlab/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: e5176370ddc115f6e37b54afbe3a739cac2019b58d9b18418e75464b925cb777
+  sha256: 4e7f72322f2511f3ce6be8a33034019211e1b6dec197e3371fe2a59a4052443c
 
 build:
   number: 0
@@ -29,18 +29,14 @@ requirements:
     - libpython  # [win]
     - python
     - pip
-    - matplotlib-base
     - numpy
-    - scikit-image
     - scipy
     - setuptools
     - setuptools_scm
     - wheel
   run:
     - python
-    - matplotlib-base
     - numpy
-    - scikit-image
     - scipy
 
 test:
@@ -67,4 +63,5 @@ extra:
   recipe-maintainers:
     - jhkennedy
     - jlrine2
+    - scottstanie
     - yunjunz
