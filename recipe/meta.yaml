@@ -30,10 +30,7 @@ requirements:
     - python
     - pip
     - numpy
-    - scipy
-    - setuptools
     - setuptools_scm
-    - wheel
   run:
     - python
     - numpy
