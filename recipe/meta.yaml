@@ -1,5 +1,5 @@
 {% set name = "PySolid" %}
-{% set version = "0.3.1" %}
+{% set version = "0.3.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/insarlab/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 4e7f72322f2511f3ce6be8a33034019211e1b6dec197e3371fe2a59a4052443c
+  sha256: 77eb3da2a42b44d6abcc69d3320aaba6ec11d79b2e83ac9a3f4d698db67931d6
 
 build:
   number: 0
@@ -30,10 +30,7 @@ requirements:
     - python
     - pip
     - numpy
-    - scipy
-    - setuptools
     - setuptools_scm
-    - wheel
   run:
     - python
     - numpy
