@@ -15,8 +15,7 @@ build:
   script:
     - export SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}  # [unix]
     - set SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}  # [win]
-    - # CMAKE_GENERATOR b/c https://github.com/scikit-build/scikit-build-core/issues/481
-    - CMAKE_GENERATOR="Ninja" {{ PYTHON }} -m pip install . -vv
+    - CMAKE_GENERATOR="Ninja" {{ PYTHON }} -m pip install . -vv  # CMAKE_GENERATOR b/c https://github.com/scikit-build/scikit-build-core/issues/481
 
 requirements:
   build:
