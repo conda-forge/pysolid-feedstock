@@ -36,6 +36,7 @@ requirements:
     - numpy
     - setuptools
     - setuptools_scm
+    - wheel
   run:
     - python
     - numpy
