@@ -14,10 +14,8 @@ build:
   skip: true  # [py<36]
   script_env:
     - SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}
+    - SKBUILD_CMAKE_ARGS="-GNinja"
   script:
-    # https://github.com/scikit-build/scikit-build-core/issues/481; cannot be in script_env!
-    - export CMAKE_GENERATOR="Ninja"  # [unix]
-    - set CMAKE_GENERATOR="Ninja"  # [win]
     - {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -31,8 +29,6 @@ requirements:
     - {{ stdlib("c") }}
 
   host:
-    - m2w64-toolchain  # [win]
-    - libpython  # [win]
     - python
     - pip
     - scikit-build-core
