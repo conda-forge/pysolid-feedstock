@@ -25,7 +25,8 @@ requirements:
     - numpy                                  # [build_platform != target_platform]
     - cmake
     - ninja
-    - {{ compiler('fortran') }}
+    - {{ compiler('fortran') }}  # [unix]
+    - {{ compiler('m2w64_fortran') }}  # [win]
     - {{ stdlib("c") }}
 
   host:
