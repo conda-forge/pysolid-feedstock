@@ -30,6 +30,8 @@ requirements:
     - {{ stdlib("c") }}
 
   host:
+    - m2w64-toolchain  # [win]
+    - libpython  # [win]
     - python
     - pip
     - scikit-build-core
