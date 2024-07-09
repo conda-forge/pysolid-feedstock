@@ -15,6 +15,7 @@ build:
   script_env:
     - SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}
     - SKBUILD_CMAKE_ARGS="-GNinja"
+    - FC=gfortran  # [win]
   script:
     - {{ PYTHON }} -m pip install . -vv
 
