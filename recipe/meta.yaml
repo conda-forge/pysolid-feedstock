@@ -1,5 +1,5 @@
 {% set name = "PySolid" %}
-{% set version = "0.3.2" %}
+{% set version = "0.3.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,15 @@ package:
 
 source:
   url: https://github.com/insarlab/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 77eb3da2a42b44d6abcc69d3320aaba6ec11d79b2e83ac9a3f4d698db67931d6
+  sha256: 6f208df8386f312085c9cb618e57e7a56a43127fcf49b78a0da2d7306a54ec35
 
 build:
   number: 0
-  skip: true  # [py<36]
+  skip: true  # [py<36 or win]
+  script_env:
+    - SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}
+    - SKBUILD_CMAKE_ARGS="-GNinja"
   script:
-    - export SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}  # [unix]
-    - set SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}  # [win]
     - {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -22,13 +23,15 @@ requirements:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - numpy                                  # [build_platform != target_platform]
+    - cmake
+    - ninja
     - {{ compiler('fortran') }}
+    - {{ stdlib("c") }}
 
   host:
-    - m2w64-toolchain  # [win]
-    - libpython  # [win]
     - python
     - pip
+    - scikit-build-core
     - numpy
     - setuptools_scm
   run:
