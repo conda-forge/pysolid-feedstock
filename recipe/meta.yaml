@@ -11,11 +11,10 @@ source:
 
 build:
   number: 0
-  skip: true  # [py<36]
+  skip: true  # [py<36, win]
   script_env:
     - SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}
     - SKBUILD_CMAKE_ARGS="-GNinja"
-    - FC=gfortran  # [win]
   script:
     - {{ PYTHON }} -m pip install . -vv
 
@@ -26,13 +25,10 @@ requirements:
     - numpy                                  # [build_platform != target_platform]
     - cmake
     - ninja
-    - {{ compiler('fortran') }}  # [unix]
-    - {{ compiler('m2w64_fortran') }}  # [win]
+    - {{ compiler('fortran') }}
     - {{ stdlib("c") }}
 
   host:
-    - m2w64-toolchain  # [win]
-    - libpython  # [win]
     - python
     - pip
     - scikit-build-core
