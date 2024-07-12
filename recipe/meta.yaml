@@ -10,7 +10,7 @@ source:
   sha256: 6f208df8386f312085c9cb618e57e7a56a43127fcf49b78a0da2d7306a54ec35
 
 build:
-  number: 0
+  number: 1
   skip: true  # [py<36 or win]
   script_env:
     - SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}
