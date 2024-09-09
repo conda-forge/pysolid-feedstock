@@ -11,11 +11,11 @@ Summary: A Python wrapper for solid to compute solid Earth tides
 
 Development: https://github.com/insarlab/PySolid
 
-The Python based solid Earth tides (PySolid) is a thin Python wrapper of the
+The Python-based solid Earth tides (PySolid) is a thin Python wrapper of the
 `solid.for` program (by Dennis Milbert based on `dehanttideinelMJD.f` from
 V. Dehant, S. Mathews, J. Gipson and C. Bruyninx) to calculate solid Earth
-tides in east/north/up direction (section 7.1.1 in the 2010 IERS Conventions).
-Solid Earth tides introduces large offsets in SAR observations and long spatial
+tides in the east/north/up direction (section 7.1.1 in the 2010 IERS Conventions).
+Solid Earth tides introduce large offsets in SAR observations and long spatial
 wavelength ramps in InSAR observations, as shown in the Sentinel-1 data with
 regular acquisitions and large swaths (Yunjun et al., 2022).
 
@@ -38,20 +38,6 @@ Current build status
         <table>
           <thead><tr><th>Variant</th><th>Status</th></tr></thead>
           <tbody><tr>
-              <td>linux_64_numpy1.22python3.8.____cpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13835&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pysolid-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_numpy1.22python3.8.____cpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>linux_64_numpy1.22python3.9.____73_pypy</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13835&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pysolid-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_numpy1.22python3.9.____73_pypy" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
               <td>linux_64_numpy2.0python3.10.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13835&branchName=main">
@@ -80,17 +66,10 @@ Current build status
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_numpy1.22python3.8.____cpython</td>
+              <td>linux_64_numpy2python3.13.____cp313</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13835&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pysolid-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_numpy1.22python3.8.____cpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_64_numpy1.22python3.9.____73_pypy</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13835&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pysolid-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_numpy1.22python3.9.____73_pypy" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pysolid-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_numpy2python3.13.____cp313" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -122,10 +101,10 @@ Current build status
                 </a>
               </td>
             </tr><tr>
-              <td>osx_arm64_numpy1.22python3.8.____cpython</td>
+              <td>osx_64_numpy2python3.13.____cp313</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13835&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pysolid-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_numpy1.22python3.8.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pysolid-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_numpy2python3.13.____cp313" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -154,6 +133,13 @@ Current build status
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13835&branchName=main">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pysolid-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_numpy2.0python3.9.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_numpy2python3.13.____cp313</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=13835&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/pysolid-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_numpy2python3.13.____cp313" alt="variant">
                 </a>
               </td>
             </tr>
