@@ -10,7 +10,7 @@ source:
   sha256: 1f28f5b50105d259bc55695af207cc8f730f4b5f1ac4fb6f9e15a57f8688113e
 
 build:
-  number: 2
+  number: 3
   skip: true  # [py<36 or win]
   script_env: SKBUILD_CMAKE_ARGS="-GNinja"
   script: {{ PYTHON }} -m pip install . -vv
