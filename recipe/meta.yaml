@@ -13,8 +13,10 @@ source:
 
 build:
   number: 4
-  skip: true  # [py<36 or win]
-  script_env: SKBUILD_CMAKE_ARGS="-GNinja"
+  skip: true  # [py<36]
+  script_env:
+    - SKBUILD_CMAKE_ARGS="-GNinja"
+    - FC=gfortran  # [win]
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -24,10 +26,13 @@ requirements:
     - numpy                                  # [build_platform != target_platform]
     - cmake
     - ninja
-    - {{ compiler('fortran') }}
+    - {{ compiler('fortran') }}  # [unix]
+    - {{ compiler('m2w64_fortran') }}  # [win]
     - {{ stdlib("c") }}
 
   host:
+    - m2w64-toolchain  # [win]
+    - libpython  # [win]
     - python
     - pip
     - scikit-build-core
