@@ -1,0 +1,13 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 380a41f..cab061c 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -12,7 +12,7 @@ find_package(
+ # F2PY headers
+ execute_process(
+   COMMAND "${PYTHON_EXECUTABLE}" -c
+-          "import numpy.f2py; print(numpy.f2py.get_include())"
++          "from pathlib import Path; import numpy.f2py; print(Path(numpy.f2py.get_include()).as_posix())"
+   OUTPUT_VARIABLE F2PY_INCLUDE_DIR
+   OUTPUT_STRIP_TRAILING_WHITESPACE)
+ 
