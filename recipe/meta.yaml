@@ -26,12 +26,10 @@ requirements:
     - numpy                                  # [build_platform != target_platform]
     - cmake
     - ninja
-    - {{ compiler('fortran') }}  # [unix]
-    - {{ compiler('m2w64_fortran') }}  # [win]
+    - {{ compiler('fortran') }}
     - {{ stdlib("c") }}
 
   host:
-    - m2w64-toolchain  # [win]
     - libpython  # [win]
     - python
     - pip
