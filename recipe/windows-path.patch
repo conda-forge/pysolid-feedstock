@@ -1,0 +1,16 @@
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -11,10 +11,12 @@
+ 
+ # F2PY headers
+ execute_process(
+-  COMMAND "${PYTHON_EXECUTABLE}" -c
++  COMMAND "${Python_EXECUTABLE}" -c
+           "import numpy.f2py; print(numpy.f2py.get_include())"
+   OUTPUT_VARIABLE F2PY_INCLUDE_DIR
+   OUTPUT_STRIP_TRAILING_WHITESPACE)
++# Windows paths contain backslashes, which CMake would treat as escapes
++file(TO_CMAKE_PATH "${F2PY_INCLUDE_DIR}" F2PY_INCLUDE_DIR)
+ 
+ add_library(fortranobject OBJECT "${F2PY_INCLUDE_DIR}/fortranobject.c")
+ target_link_libraries(fortranobject PUBLIC Python::NumPy)
