@@ -20,7 +20,10 @@ build:
   script:
     # conda-build presets CMAKE_GENERATOR to Visual Studio, which cannot drive gfortran
     - set "CMAKE_GENERATOR=Ninja"  # [win]
-    - {{ PYTHON }} -m pip install . -vv
+    - {{ PYTHON }} -m pip install . -vv  # [build_platform == target_platform]
+    # FindPython fails to find free-threaded Python when cross-compiling (CMake 4.4.5, Python 3.14.10);
+    # let it query the interpreter instead, cf. https://github.com/conda-forge/conda-forge.github.io/issues/2901
+    - {{ PYTHON }} -m pip install . -vv -Ccmake.define.CMAKE_POLICY_DEFAULT_CMP0190=NEW -Ccmake.define.CMAKE_CROSSCOMPILING_EMULATOR=/usr/bin/env  # [build_platform != target_platform]
 
 requirements:
   build:
