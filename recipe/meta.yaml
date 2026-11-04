@@ -18,8 +18,11 @@ build:
   script_env:
     - SKBUILD_CMAKE_ARGS="-GNinja"  # [unix]
   script:
-    # conda-build presets CMAKE_GENERATOR to Visual Studio, which cannot drive gfortran
+    # conda-build and the MSVC activation preset a Visual Studio generator with platform and
+    # toolset, which cannot drive flang; use Ninja and drop the settings it does not accept
     - set "CMAKE_GENERATOR=Ninja"  # [win]
+    - set "CMAKE_GENERATOR_PLATFORM="  # [win]
+    - set "CMAKE_GENERATOR_TOOLSET="  # [win]
     - {{ PYTHON }} -m pip install . -vv  # [build_platform == target_platform]
     # FindPython fails to find free-threaded Python when cross-compiling (CMake 4.4.5, Python 3.14.10);
     # let it query the interpreter instead, cf. https://github.com/conda-forge/conda-forge.github.io/issues/2901
